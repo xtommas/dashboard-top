@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <div class="row" id="dashboard">
+                <object data="images/svgs/dashboard.svg" type="image/svg+xml" class="dashboard" id="logo"></object>
+                <p class="sidebar-text">Dashboard</p>
+            </div>
+            <div class="row" id="home">
+                <object data="images/svgs/home.svg" type="image/svg+xml" class="home"></object>
+                <p class="sidebar-text">Home</p>
+            </div>
+            <div class="row" id="profile">
+                <object data="images/svgs/account.svg" type="image/svg+xml" class="profile"></object>
+                <p class="sidebar-text">Profile</p>
+            </div>
+            <div class="row" id="messages">
+                <object data="images/svgs/message.svg" type="image/svg+xml" class="messages"></object>
+                <p class="sidebar-text">Messages</p>
+            </div>
+            <div class="row" id="history">
+                <object data="images/svgs/history.svg" type="image/svg+xml" class="history"></object>
+                <p class="sidebar-text">History</p>
+            </div>
+            <div class="row" id="tasks">
+                <object data="images/svgs/calendar.svg" type="image/svg+xml" class="tasks"></object>
+                <p class="sidebar-text">Tasks</p>
+            </div>
+            <div class="row" id="communities">
+                <object data="images/svgs/people.svg" type="image/svg+xml" class="communities"></object>
+                <p class="sidebar-text">Communities</p>
+            </div>
+            <div class="row" id="settings">
+                <object data="images/svgs/cog.svg" type="image/svg+xml" class="settings"></object>
+                <p class="sidebar-text">Settings</p>
+            </div>
+            <div class="row" id="support">
+                <object data="images/svgs/help.svg" type="image/svg+xml" class="support"></object>
+                <p class="sidebar-text">Support</p>
+            </div>
+            <div class="row" id="privacy">
+                <object data="images/svgs/shield.svg" type="image/svg+xml" class="privacy"></object>
+                <p class="sidebar-text">Privacy</p>
+            </div>
+        </div>
+    
+        <header>
+            <div class="searchbar">
+                <input type="text" id="searchbox" placeholder="Search">
+                <button id="searchSubmit" type="submit" name="searchQuerySubmit">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#94a3b8" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+                </button>
+            </div>
+            
+            <div class="session">
+                <object data="images/svgs/bell.svg" type="image/svg+xml" class="bell"></object>
+                <img src="images/rebel3.jpg" alt="user profile picture" id="profile-picture-top">
+                <p class="name-top">Tomás</p>
+            </div>
+           
+            <div class="user">
+                <img src="images/rebel3.jpg" alt="user profile picture" id="profile-picture-bottom">
+                <p class="greeting">Hi there,</p>
+                <p class="username">Tomás (@xtommas)</p>
+            </div>
+
+            <div class="buttons">
+                <button id="new">New</button>
+                <button id="upload">Upload</button>
+                <Button id="share">Share</Button>
+            </div>
+            
+        </header>
+    
+        <div class="content">
+    
+            <div class="projects">
+                <h1>Your Projects</h1>
+                <div class="projectCards">
+                    <div class="card">
+                        <h2>Super Cool Project</h2>
+                        <p>Quisque gravida ac libero maximus condimentum. Donec nec elementum nulla. Nullam euismod congue nunc a mattis. Donec dictum lacus elit, molestie bibendum eros sagittis ac. Pellentesque luctus neque ac tortor suscipit blandit. In blandit semper urna, sit amet consequat diam eleifend in. Proin ac enim non libero pharetra mollis. Nullam ac nunc eu dui venenatis gravida id nec risus.</p>
+                        <div class="icons">
+                            <object data="images/svgs/heart.svg" type="image/svg+xml" class="like"></object>
+                            <object data="images/svgs/eye.svg" type="image/svg+xml" class="eye"></object>
+                            <object data="images/svgs/source-fork.svg" type="image/svg+xml" class="fork"></object>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Less Cool Project</h2>
+                        <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapiem et, facilis dolor. Duis sem purus, dignissim ut sapien in, varius pellentesque lacus.</p>
+                        <div class="icons">
+                            <object data="images/svgs/heart.svg" type="image/svg+xml" class="like"></object>
+                            <object data="images/svgs/eye.svg" type="image/svg+xml" class="eye"></object>
+                            <object data="images/svgs/source-fork.svg" type="image/svg+xml" class="fork"></object>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Impossible App</h2>
+                        <p>Integer molestie leo non diam convallis condimentum. Sed et dolor quis velit fringilla ullamcorper vel in urna. Ut eget efficitur orci. Cras orci tortor, gravida sed diam vel, feugiat consequat nisl. Phasellus dictum congue orci. Quisque aliquet eu dolor at feugiat. Morbi maximus sagittis tristique.</p>
+                        <div class="icons">
+                            <object data="images/svgs/heart.svg" type="image/svg+xml" class="like"></object>
+                            <object data="images/svgs/eye.svg" type="image/svg+xml" class="eye"></object>
+                            <object data="images/svgs/source-fork.svg" type="image/svg+xml" class="fork"></object>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Easy Peasy App</h2>
+                        <p>Mauris quis orci a erat commodo imperdiet. Nullam eu pharetra turpis. Pellentesque ex odio, auctor non ante in, tincidunt cursus dolor. Sed auctor urna vel nisi ullamcorper pretium. Integer sagittis vulputate accumsan.</p>
+                        <div class="icons">
+                            <object data="images/svgs/heart.svg" type="image/svg+xml" class="like"></object>
+                            <object data="images/svgs/eye.svg" type="image/svg+xml" class="eye"></object>
+                            <object data="images/svgs/source-fork.svg" type="image/svg+xml" class="fork"></object>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Ad Blocker</h2>
+                        <p>Nulla maximus suscipit vehicula. Ut mollis lobortis ante eget elementum. Vivamus congue lacus eu fermentum congue. Vivamus vel nibh id arcu vestibulum cursus eu vel orci. Suspendisse fringilla fringilla nibh non vestibulum. Morbi tristique neque quis sem tempus, in pulvinar ante tempor. Nunc in mollis tortor.</p>
+                        <div class="icons">
+                            <object data="images/svgs/heart.svg" type="image/svg+xml" class="like"></object>
+                            <object data="images/svgs/eye.svg" type="image/svg+xml" class="eye"></object>
+                            <object data="images/svgs/source-fork.svg" type="image/svg+xml" class="fork"></object>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>Money Maker</h2>
+                        <p>Quisque id luctus erat. Nullam posuere leo eget sem suscipit, sed semper nunc pellentesque. Suspendisse convallis ut diam non tempor. Pellentesque tempor quam nec est egestas convallis. Praesent ut mauris felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Nulla sit amet hendrerit dui. Suspendisse potenti.</p>
+                        <div class="icons">
+                            <object data="images/svgs/heart.svg" type="image/svg+xml" class="like"></object>
+                            <object data="images/svgs/eye.svg" type="image/svg+xml" class="eye"></object>
+                            <object data="images/svgs/source-fork.svg" type="image/svg+xml" class="fork"></object>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="announcements">
+                <h1>Announcements</h1>
+                <div class="announcementCard">
+                    <div class="announcement">
+                        <h2>Site Maintenance</h2>
+                        <p>Vestibulum condimentum tellus laculs, in accumsan elit maximus ac. Donec hendrerit sodales congue...</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="announcement">
+                        <h2>Community Share Day</h2>
+                        <p>Nam vel lectus tincidunt, rutrum nulla eu, ornare libero. Aliquam dictum accumsan porttitor...</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="announcement">
+                        <h2>Updated Privacy Policy</h2>
+                        <p>Phasellus efficitur nisi eget elit consectetur, eget condimentum ante auctor. Cras fringilla sagittis sem in mattis...</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="trending">
+                <h1>Trending</h1>
+                <div class="trendingCard">
+                    <div class="trendingRow">
+                        <img src="images/rebel1.jpg" alt="rebel profile picture" class="pfp">
+                        <h2 class="handle">@rebel</h2>
+                        <p class="trendingProject">World Peace Builder</p>
+                    </div>
+                    <div class="trendingRow">
+                        <img src="images/rebel3.jpg" alt="xtommas profile picture" class="pfp">
+                        <h2 class="handle">@xtommas</h2>
+                        <p class="trendingProject">Super Cool Project</p>
+                    </div>
+                    <div class="trendingRow">
+                        <img src="images/rebel4.jpg" alt="kendall profile picture" class="pfp">
+                        <h2 class="handle">@kendall</h2>
+                        <p class="trendingProject">Life Changing App</p>
+                    </div>
+                    <div class="trendingRow">
+                        <img src="images/rebel2.jpg" alt="alex profile picture" class="pfp">
+                        <h2 class="handle">@alex</h2>
+                        <p class="trendingProject">No Traffic Maker</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

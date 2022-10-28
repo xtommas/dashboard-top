@@ -1,0 +1,416 @@
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS RESET END */
+
+:root {
+    --background: #0f172a;
+    --secondary: #1e293b;
+    --text-title: #cbd5e1;
+    --text-paragraph: #94a3b8;
+    --accent: #6366f1;
+}
+
+body {
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: var(--background);
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    padding-left: 15px;
+    padding-top: 15px;
+    grid-template-rows: 1fr repeat(11, 0.6fr);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-self: start;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+}
+
+.sidebar-text {
+    color: var(--text-title);
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: center;
+}
+
+.row object {
+    justify-self: center;
+}
+
+.dashboard, .home, .profile, .messages, .history, .tasks, .communities, .settings, .support, .privacy {
+    width: 20px;
+    height: 20px;
+    filter: invert(98%) sepia(71%) saturate(780%) hue-rotate(174deg) brightness(94%) contrast(87%);
+    /* filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(107%) contrast(100%); */
+}
+
+.row:hover {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(200%) contrast(100%);
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    filter: invert(45%) sepia(65%) saturate(4398%) hue-rotate(223deg) brightness(97%) contrast(95%);
+}
+
+#dashboard {
+    /* grid-row: 1 / 3; */
+    align-self: start;
+}
+
+#dashboard p {
+    font-size: 30px;
+    margin-right: 50px;
+}
+
+header {
+    grid-column: 2 / 3;
+    background-color: var(--background);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.searchbar {
+    justify-self: start;
+    align-self: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+::placeholder {
+    color: var(--text-title)
+}
+
+#searchbox {
+    width: 100%;
+    height: 2rem;
+    background: var(--secondary);
+    outline: none;
+    border: none;
+    border-radius: 1.625rem;
+    padding: 0 3.5rem 0 1.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    caret-color: var(--text-title);
+    color: var(--text-title)
+}
+
+#searchSubmit {
+    width: 3.5rem;
+    height: 2.8rem;
+    margin-left: -3.5rem;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+#searchSubmit:hover {
+    cursor: pointer;
+  }
+
+.session {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-title);
+    justify-self: end;
+    align-self: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.session .name-top {
+    font-family: 'Inter', sans-serif;
+    align-self: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.name-top:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.bell {
+    width: 20px;
+    height: 20px;
+    filter: invert(98%) sepia(71%) saturate(780%) hue-rotate(174deg) brightness(94%) contrast(87%);
+    /* filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(107%) contrast(100%); */
+}
+
+.bell:hover {
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(107%) contrast(100%);
+}
+
+.session .bell {
+    align-self: center;
+    justify-self: center;
+}
+
+#profile-picture-top {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#profile-picture-bottom {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    grid-row: 1 / 3;
+}
+
+.user p {
+    font-family: "inter", sans-serif;
+    color: var(--text-title)
+}
+
+.user .greeting {
+    font-size: 12px;
+    align-self: end;
+}
+
+.user .username {
+    font-size: 30px;
+    align-self: center;
+    font-weight: 600;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 5px;
+    gap: 40px;
+}
+
+#new, #upload, #share {
+    align-self: end;
+    justify-self: end;
+    cursor: pointer;
+    background-color: var(--accent);
+    border: none;
+    color: white;
+    font-family: "inter", sans-serif;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    border-radius: 25px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.content {
+    background-color: var(--background);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding: 50px 30px 30px 30px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 30px;
+}
+
+.content h1 {
+    color: var(--text-title);
+    font-weight: 800;
+    font-size: 30px;
+    align-self: end;
+    margin-bottom: 20px;
+}
+
+.projects {
+    grid-row: 1 / 3;
+}
+
+.projectCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.projectCards .card {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 20px 20px 30px 20px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    row-gap: 15px;
+    box-shadow: 0px 3px 0px 0px var(--accent);
+}
+
+.projectCards .card h2 {
+    color: var(--text-title);
+    font-weight: 600;
+    font-size: 20px;
+    align-self: end;
+}
+
+.projectCards .card p {
+    color: var(--text-paragraph);
+    font-size: 15px;
+}
+
+.projectCards .card .icons {
+    align-self: end;
+    justify-self: end;
+}
+
+.like, .eye, .fork {
+    width: 20px;
+    height: 20px;
+    filter: invert(98%) sepia(71%) saturate(780%) hue-rotate(174deg) brightness(94%) contrast(87%);
+    margin-left: 15px;
+}
+
+.like:hover, .eye:hover, .fork:hover {
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(107%) contrast(100%);
+}
+
+.announcementCard {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 40px 25px 40px 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 0.1fr 4fr 0.1fr 4fr;
+    row-gap: 15px;
+}
+
+.divider {
+    background-color: #283345;
+    /* background-color: var(--accent); */
+    height: 1px;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.announcement h2 {
+    color: var(--text-title);
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.announcement p {
+    color: var(--text-paragraph);
+    font-size: 13px;
+}
+
+.trendingCard {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 30px 0px 30px 0px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 25px;
+}
+
+.trendingRow {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5px;
+}
+
+.pfp {
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: center;
+}
+
+.trendingRow img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.handle {
+    color: var(--text-title);
+    align-self: end;
+}
+
+.trendingProject {
+    color: var(--text-paragraph);
+}
+
+
+
